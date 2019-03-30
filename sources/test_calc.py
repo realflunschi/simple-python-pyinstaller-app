@@ -44,5 +44,13 @@ class TestCalc(unittest.TestCase):
         result = calc.add2('abc', '5.5')
         self.assertEqual(result, 'abc5.5')
 
+    def test_add_string_and_number(self):
+        """
+        Test the addition of a negative and a positive float returns the
+        correct result
+        """
+        result = calc.add2(-3.5, 5.5)
+        self.assertEqual(result, 2)
+
 if __name__ == '__main__':
     unittest.main()
